@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jomhuria&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+html::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #e0bf02;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #e0bf02;
+  cursor: pointer;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  color: #ffffff;
+}
+.btn:hover {
+  color: #ffffff;
+}
+
+section {
+  padding: 3rem 6%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.heading {
+  font-family: "Jomhuria", serif;
+  font-size: 5rem;
+  letter-spacing: 0.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 0.4rem solid #00A86B;
+  border-bottom: 0.4rem solid #e0bf02;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #00A86B;
+  z-index: 100;
+  border-bottom: 0.4rem solid #e0bf02;
+}
+.header .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 1.5rem 6%;
+}
+.header .flex img {
+  width: 100%;
+  height: 6rem;
+}
+.header .flex .navbar a {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.header .flex .navbar a:hover {
+  border-bottom: 0.3rem solid #e0bf02;
+  border-top: 0.3rem solid #e0bf02;
+  transition: all 0.1s ease;
+}
+.header .flex #menu-btn {
+  display: none;
+  font-size: 2.5rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.home-bg {
+  background: linear-gradient(90deg, rgba(134, 117, 84, 0.6), transparent 200%), url(../img/kaaba.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.home-bg .home {
+  min-height: 60rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-bg .home .content {
+  text-align: center;
+}
+.home-bg .home .content h3 {
+  font-size: 4rem;
+  color: #ffffff;
+}
+.home-bg .home .content h3 span {
+  color: rgb(192, 32, 32);
+}
+.home-bg .home .content p {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  color: #ffffff;
+  line-height: 2;
+}
+
+.tentang-kami {
+  margin-top: 5rem;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+.tentang-kami .text {
+  flex: 1 1 30rem;
+}
+.tentang-kami .text .heading {
+  font-family: "Jomhuria", serif;
+  font-size: 5rem;
+  letter-spacing: 0.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-top: 0.4rem solid #00A86B;
+  border-bottom: 0.4rem solid #e0bf02;
+}
+.tentang-kami .text p {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+.tentang-kami .image {
+  background-color: #e0bf02;
+  flex: 1 1 20rem;
+}
+.tentang-kami .image img {
+  padding-right: 0.3rem;
+  padding-bottom: 0.6rem;
+  width: 100%;
+}
+
+.paket {
+  margin-top: 4rem;
+  text-align: center;
+}
+.paket .container {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+.paket .container .box {
+  background-color: #e0bf02;
+}
+.paket .container .box .image {
+  position: relative;
+  padding: 0.3rem;
+}
+.paket .container .box .image img {
+  width: 100%;
+}
+.paket .container .box .image .text {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  top: 1rem;
+  left: 1rem;
+  background-color: #00A86B;
+  opacity: 0.8;
+}
+.paket .container .box .image .text p {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.paket .container .box h4 {
+  margin: 1rem 0 1rem 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.paket .container .box p {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.paket .container .box span {
+  font-size: 1.4rem;
+  text-transform: lowercase;
+}
+.paket .container .box .btn {
+  background-color: #00A86B;
+  margin-bottom: 2rem;
+  width: 80%;
+}
+.paket .container .box .btn:hover {
+  background-color: #ffffff;
+  color: #00A86B;
+}
+.paket .container .box .info {
+  text-align: start;
+  padding: 0 3rem 0 3rem;
+}
+.paket .container .box .info .batas {
+  height: 1rem;
+  width: 100%;
+  border-bottom: 0.3rem solid #00A86B;
+  margin: 1rem 0 1rem 0;
+}
+.paket .container .box .info .baris {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  align-items: center;
+}
+.paket .container .box .info .baris p {
+  font-size: 1.4rem;
+  line-height: 2;
+}
+.paket .container .box .info .baris .tanya {
+  flex: 1 1 20rem;
+}
+.paket .container .box .info .baris .jawab {
+  flex: 1 1 40rem;
+}
+
+.galeri {
+  margin-top: 5rem;
+  text-align: center;
+}
+.galeri .container {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.galeri .container .box {
+  position: relative;
+  background-color: #00A86B;
+  overflow: hidden;
+}
+.galeri .container .box .image {
+  padding: 0.3rem;
+}
+.galeri .container .box .image img {
+  width: 100%;
+}
+.galeri .container .box .hover {
+  position: absolute;
+  opacity: 0.8;
+  transition: all 1s ease;
+  background-color: #e0bf02;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.galeri .container .box .hover i {
+  color: #ffffff;
+  font-size: 3rem;
+}
+.galeri .container .box .hover h4 {
+  font-size: 3rem;
+  color: #ffffff;
+}
+.galeri .container .box:hover .hover {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.testimoni {
+  margin-top: 5rem;
+  text-align: center;
+}
+.testimoni .slide {
+  margin-top: 5rem;
+}
+.testimoni .slide .image img {
+  width: 100%;
+}
+
+.bantuan-bg {
+  margin-top: 5rem;
+  background: linear-gradient(90deg, #00A86B, transparent 210%), url(../img/kaaba.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.bantuan-bg .bantuan {
+  min-height: 20rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.bantuan-bg .bantuan .teks {
+  flex: 1 1 40rem;
+}
+.bantuan-bg .bantuan .teks h3 {
+  font-size: 3rem;
+  color: #ffffff;
+}
+.bantuan-bg .bantuan .teks span {
+  color: #e0bf02;
+}
+.bantuan-bg .bantuan .btn {
+  margin-left: auto;
+  font-size: 2rem;
+}
+.bantuan-bg .bantuan .btn:hover {
+  background-color: #ffffff;
+  color: #e0bf02;
+}
+
+.kontak-kami {
+  margin-top: 5rem;
+}
+.kontak-kami .container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.kontak-kami .container .text {
+  flex: 1 1 50rem;
+}
+.kontak-kami .container .text p {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.kontak-kami .container .text h4 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+.kontak-kami .container .text a {
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  color: #000000;
+}
+.kontak-kami .container .text a:hover {
+  margin-left: 0.5rem;
+}
+.kontak-kami .container .map {
+  flex: 1 1 40rem;
+  background-color: #00A86B;
+}
+.kontak-kami .container .map iframe {
+  width: 100%;
+  padding: 0.3rem;
+}
+
+.footer-bg {
+  background-color: #00A86B;
+}
+.footer-bg .footer .box-container {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.footer-bg .footer .box-container .box {
+  flex: 1 1 30rem;
+  margin-top: 2rem;
+  padding: 3rem;
+  text-align: center;
+}
+.footer-bg .footer .box-container .box h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+.footer-bg .footer .box-container .box p {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  color: #e4dcdc;
+  padding: 0.3rem;
+}
+.footer-bg .footer .box-container .box a {
+  display: block;
+  font-size: 1.6rem;
+  color: #e4dcdc;
+  padding: 1rem;
+}
+.footer-bg .footer .box-container .box a i {
+  font-size: 2rem;
+  color: #e0bf02;
+}
+.footer-bg .footer .box-container .box a:hover {
+  color: #ffffff;
+  padding-left: 0.7rem;
+}
+.footer-bg .footer .box-container .box .info {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  align-items: center;
+}
+.footer-bg .footer .box-container .box .info .tanya {
+  flex: 1 1 20rem;
+}
+.footer-bg .footer .box-container .box .info .jawab {
+  flex: 1 1 40rem;
+}
+.footer-bg .footer .batas {
+  margin-top: 3rem;
+  width: 100%;
+  height: 0.5rem;
+  background-color: #e0bf02;
+}
+.footer-bg .footer .credit {
+  text-align: center;
+}
+.footer-bg .footer .credit p {
+  padding: 2rem 0 0 2rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+.footer-bg .footer .credit p span {
+  text-transform: uppercase;
+}
+
+/* media queries  */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  .header .flex .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background-color: #00A86B;
+    border-top: 0.2rem solid #000000;
+    border-bottom: 0.2rem solid #000000;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.2s linear;
+  }
+  .header .flex #menu-btn {
+    display: inline-block;
+    transition: 0.2s linear;
+  }
+  .header .flex #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+  .header .flex .navbar a {
+    padding-left: 3%;
+    display: block;
+    margin: 2rem;
+  }
+  .header .flex .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .bantuan-bg .bantuan .btn {
+    margin: auto;
+  }
+}
+@media (max-width: 590px) {
+  .tentang-kami .text {
+    text-align: center;
+  }
+  .bantuan-bg .bantuan .teks {
+    text-align: center;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */

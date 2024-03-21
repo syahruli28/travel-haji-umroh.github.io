@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+
+
+$black: #000000;
+$green: #00A86B;
+$gold: #e0bf02;
+$white: #ffffff;
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+$border: .2rem solid $black;
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+
+    &::-webkit-scrollbar {
+        height: .5rem;
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $gold;
+    }
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: $gold;
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    color: $white;
+
+    &:hover {
+        color: $white;
+    }
+
+}
+
+section {
+    padding: 3rem 6%;
+    // padding: 5rem 9%;
+    // max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: hidden; // agar tidak ada space di kanan
+    overflow-y: hidden;
+}
+
+.heading {
+    font-family: "Jomhuria", serif;
+    font-size: 5rem;
+    letter-spacing: .6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: .4rem solid $green;
+    border-bottom: .4rem solid $gold;
+}
+
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $green;
+    z-index: 100;
+    border-bottom: .4rem solid $gold;
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 1.5rem 6%;
+
+        // a.logo {
+        //     font-size: 6rem;
+        //     color: $white;
+        //     font-family: "Jomhuria", serif;
+        //     text-transform: uppercase;
+        //     font-weight: 400;
+        //     letter-spacing: .6rem;
+
+        //     &:hover {
+        //         color: $gold;
+        //     }
+        // }
+        img {
+            width: 100%;
+            height: 6rem;
+        }
+
+        .navbar {
+
+            a {
+                margin-left: 2rem;
+                font-size: 1.5rem;
+                color: $white;
+
+                &:hover {
+                    border-bottom: .3rem solid $gold;
+                    border-top: .3rem solid $gold;
+                    transition: all .1s ease;
+                }
+            }
+        }
+
+        #menu-btn {
+            display: none;
+            font-size: 2.5rem;
+            color: $white;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.home-bg {
+    background: linear-gradient(90deg, rgba(134, 117, 84, 0.60), transparent 200%), url(../img/kaaba.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .home {
+        min-height: 60rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .content {
+            text-align: center;
+
+            h3 {
+                font-size: 4rem;
+                color: $white;
+
+                span {
+                    color: rgb(192, 32, 32);
+                }
+            }
+
+            p {
+                font-size: 1.6rem;
+                padding: 1rem 0;
+                color: $white;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+
+.tentang-kami {
+    margin-top: 5rem;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+
+
+    .text {
+        flex: 1 1 30rem;
+        // text-align: justify;
+
+        .heading {
+            font-family: "Jomhuria", serif;
+            font-size: 5rem;
+            letter-spacing: .6rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-top: .4rem solid $green;
+            border-bottom: .4rem solid $gold;
+        }
+
+        p {
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            line-height: 2;
+        }
+    }
+
+    .image {
+        background-color: $gold;
+        flex: 1 1 20rem;
+
+        img {
+            padding-right: .3rem;
+            padding-bottom: .6rem;
+            width: 100%;
+        }
+    }
+}
+
+
+.paket {
+    margin-top: 4rem;
+    text-align: center;
+
+
+    .container {
+        margin-top: 4rem;
+        @include grid(25rem);
+
+        .box {
+            background-color: $gold;
+
+            .image {
+                position: relative;
+                padding: .3rem;
+
+                img {
+                    width: 100%;
+                }
+
+                .text {
+                    position: absolute;
+                    padding: .5rem 1rem;
+                    top: 1rem;
+                    left: 1rem;
+                    background-color: $green;
+                    opacity: .8;
+
+                    p {
+                        color: $white;
+                        font-size: 1.2rem;
+                    }
+
+                }
+            }
+
+            h4 {
+                margin: 1rem 0 1rem 0;
+                font-size: 2rem;
+                text-transform: uppercase;
+                color: $white;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color: $white;
+            }
+
+            span {
+                font-size: 1.4rem;
+                text-transform: lowercase;
+            }
+
+            .btn {
+                background-color: $green;
+                margin-bottom: 2rem;
+                width: 80%;
+
+                &:hover {
+                    background-color: $white;
+                    color: $green;
+                }
+            }
+
+
+
+            .info {
+                text-align: start;
+                padding: 0 3rem 0 3rem;
+
+                .batas {
+                    height: 1rem;
+                    width: 100%;
+                    border-bottom: .3rem solid $green;
+                    margin: 1rem 0 1rem 0;
+                }
+
+                .baris {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    gap: 1rem;
+                    align-items: center;
+
+                    p {
+                        font-size: 1.4rem;
+                        line-height: 2;
+                    }
+
+                    .tanya {
+                        flex: 1 1 20rem;
+                    }
+
+                    .jawab {
+                        flex: 1 1 40rem;
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+
+
+.galeri {
+    margin-top: 5rem;
+    text-align: center;
+
+    .container {
+        margin-top: 4rem;
+        @include grid(30rem);
+
+        .box {
+            position: relative;
+            background-color: $green;
+            overflow: hidden;
+
+            .image {
+                padding: .3rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .hover {
+                position: absolute;
+                opacity: .8;
+                transition: all 1s ease;
+                background-color: $gold;
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                justify-content: center;
+
+                i {
+                    color: $white;
+                    font-size: 3rem;
+                }
+
+                h4 {
+                    font-size: 3rem;
+                    color: $white;
+                }
+
+            }
+
+            &:hover .hover {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+
+.testimoni {
+    // padding: 1.5rem 6%;
+    margin-top: 5rem;
+    text-align: center;
+
+    .slide {
+        margin-top: 5rem;
+
+        .image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.bantuan-bg {
+    margin-top: 5rem;
+    background: linear-gradient(90deg, $green, transparent 210%),
+        url(../img/kaaba.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    .bantuan {
+        min-height: 20rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4rem;
+
+        .teks {
+            flex: 1 1 40rem;
+
+            h3 {
+                font-size: 3rem;
+                color: $white;
+            }
+
+            span {
+                color: $gold;
+            }
+        }
+
+        .btn {
+            margin-left: auto;
+            font-size: 2rem;
+
+            &:hover {
+                background-color: $white;
+                color: $gold;
+            }
+        }
+    }
+
+}
+
+
+.kontak-kami {
+    margin-top: 5rem;
+
+    .container {
+        display: flex;
+        gap: 3rem;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .text {
+            flex: 1 1 50rem;
+
+            p {
+                margin-top: 2rem;
+                font-size: 2rem;
+                // line-height: 1.5;
+            }
+
+            h4 {
+                font-size: 2.5rem;
+                margin-top: 2rem;
+            }
+
+            a {
+                display: block;
+                font-size: 1.6rem;
+                padding: 1rem 0;
+                color: $black;
+
+                &:hover {
+                    margin-left: .5rem;
+                }
+            }
+        }
+
+        .map {
+            flex: 1 1 40rem;
+            background-color: $green;
+
+            iframe {
+                width: 100%;
+                padding: .3rem;
+            }
+        }
+    }
+}
+
+
+.footer-bg {
+    background-color: $green;
+
+    .footer {
+
+        .box-container {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            .box {
+                flex: 1 1 30rem;
+                margin-top: 2rem;
+                padding: 3rem;
+                text-align: center;
+
+                h3 {
+                    text-align: center;
+                    font-size: 2rem;
+                    color: $white;
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    line-height: 1.6;
+                    font-size: 1.6rem;
+                    color: #e4dcdc;
+                    padding: .3rem;
+                }
+
+                a {
+                    display: block;
+                    font-size: 1.6rem;
+                    color: #e4dcdc;
+                    padding: 1rem;
+
+                    i {
+                        font-size: 2rem;
+                        color: $gold;
+                    }
+
+                    &:hover {
+                        color: $white;
+                        padding-left: .7rem;
+                    }
+                }
+
+                .info {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    gap: 1rem;
+                    align-items: center;
+
+                    .tanya {
+                        flex: 1 1 20rem;
+                    }
+
+                    .jawab {
+                        flex: 1 1 40rem;
+                    }
+
+                }
+            }
+        }
+
+        .batas {
+            margin-top: 3rem;
+            width: 100%;
+            height: .5rem;
+            background-color: $gold;
+        }
+
+        .credit {
+            text-align: center;
+
+            p {
+                padding: 2rem 0 0 2rem;
+                color: $white;
+                font-size: 1.8rem;
+
+                span {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+}
+
+
+@media (max-width:768px) {
+
+    .header .flex {
+
+        .navbar {
+            position: absolute;
+            top: 99%;
+            left: 0;
+            right: 0;
+            background-color: $green;
+            border-top: $border;
+            border-bottom: $border;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: .2s linear;
+        }
+
+        #menu-btn {
+            display: inline-block;
+            transition: .2s linear;
+        }
+
+        #menu-btn.fa-times {
+            transform: rotate(180deg);
+        }
+
+        .navbar a {
+            padding-left: 3%;
+            display: block;
+            margin: 2rem;
+        }
+
+        .navbar.active {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+
+    .bantuan-bg {
+        .bantuan {
+
+            .btn {
+                margin: auto;
+            }
+        }
+    }
+
+}
+
+@media (max-width:590px) {
+
+    .tentang-kami {
+        .text {
+            text-align: center;
+        }
+    }
+
+    .bantuan-bg {
+        .bantuan {
+            .teks {
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+}
